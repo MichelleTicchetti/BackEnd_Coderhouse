@@ -52,11 +52,11 @@ class ProductManager {
 const manager = new ProductManager();
 manager.addProduct(
   "pelota",
-  "pelota dle mundial",
+  "pelota del mundial",
   5000,
   "sin imagen",
   "abc123",
-  25
+  2500
 );
 manager.addProduct(
   "camiseta",
@@ -64,15 +64,15 @@ manager.addProduct(
   20000,
   "sin imagen",
   "abc987",
-  25
+  500
 );
 manager.addProduct(
-  "pelota",
-  "pelota dle mundial",
-  5000,
+  "botines",
+  "botines de Messi",
+  30000,
   "sin imagen",
-  "abc123",
-  25
+  "abc485",
+  150
 );
 manager.getProducts();
 manager.getProductById(2);

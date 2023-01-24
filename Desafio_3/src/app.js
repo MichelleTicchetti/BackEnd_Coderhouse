@@ -30,11 +30,11 @@ app.get("/products", async (req, res) => {
 
 app.get("/products/:id", async (req, res) => {
   let idProduct = req.params.id;
-  let product = await manager.getProductById(idProduct);
+  let product = await manager.getProductById(parseInt(idProduct));
 
   if (!product) {
     return res.send({ error: "Producto no encontrado" });
+  } else {
+    res.send({ product });
   }
-
-  res.send({ product });
 });

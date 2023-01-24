@@ -69,8 +69,11 @@ class ProductManager {
   async getProductById(id) {
     try {
       const data = await fs.promises.readFile(`./${this.path}`, "utf-8");
+      console.log("DATA" + data);
       const products = JSON.parse(data);
+      console.log("PRODUCTS" + products);
       const product = await products.find((product) => product.id === id);
+      console.log("PRODUCT" + product);
 
       if (product) {
         return product;
